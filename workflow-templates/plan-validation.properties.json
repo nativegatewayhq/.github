@@ -1,0 +1,6 @@
+{
+  "name": "Plan policy",
+  "description": "Require a plan reference or documented exception in pull requests.",
+  "iconName": "octicon checklist",
+  "categories": ["Continuous integration"]
+}

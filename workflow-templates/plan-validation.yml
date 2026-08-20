@@ -1,0 +1,22 @@
+name: Plan policy
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-plan-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate plan reference
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: |
+          if ! printf '%s' "$BODY" | grep -Eq '([Pp]lan (ID|link)|gateway-|conformance-|dashboard-|cloud-|roadmap-)'; then
+            echo "Pull request body must reference a plan or explain the no-plan exception."
+            exit 1
+          fi

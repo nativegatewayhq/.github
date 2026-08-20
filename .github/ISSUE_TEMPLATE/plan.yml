@@ -1,0 +1,59 @@
+name: Plan proposal
+description: Propose a scoped implementation plan before code changes
+title: "[Plan]: "
+labels:
+  - plan
+body:
+  - type: input
+    id: initiative
+    attributes:
+      label: Initiative
+      description: Shared identifier for cross-repository work
+      placeholder: phase-0-gemini-sdk-e2e
+    validations:
+      required: true
+  - type: dropdown
+    id: repository
+    attributes:
+      label: Target repository
+      options:
+        - gateway
+        - conformance
+        - dashboard
+        - cloud
+        - roadmap
+        - .github
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: State the single verifiable result this plan will produce.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and exclusions
+      description: List included and explicitly excluded work.
+    validations:
+      required: true
+  - type: textarea
+    id: interfaces
+    attributes:
+      label: Interface and data changes
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Security, billing, and compatibility impact
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification and completion criteria
+    validations:
+      required: true
