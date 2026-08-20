@@ -65,7 +65,9 @@ affected_repos:
 ## 검증 증거
 
 - Repository: `https://github.com/nativegatewayhq/.github`
-- GitHub CLI로 visibility와 default branch를 검증한다.
+- Initial commit: `c2df945`
+- Public visibility와 `main` default branch를 GitHub CLI로 검증함.
+- 모든 초기 저장소에 `plan`, `initiative`, `security`, `billing` 공통 라벨을 생성함.
 
 ## 후속 작업
 
